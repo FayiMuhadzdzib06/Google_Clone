@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+
+.container {
+    width: 100%;
+    height: 649px;
+    background-image: url('img/86738.jpg');
+    background-size: cover;
+    background-position: 0 -102px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* nav */
+.nav {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.nav ul {
+    width: calc(100% - 1150px);
+    height: calc(100% - 10px);
+    display: flex;
+    margin-right: 5px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.nav ul li {
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+.nav ul li:hover {
+    text-decoration: underline;
+}
+.nav ul li:nth-child(3){
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50px;
+    transition: .2s;
+}
+.nav ul li:nth-child(3):hover {
+    background-color: rgba(255, 255, 255, .15);
+}
+.nav ul li img{
+    width: 25px;
+    height: 25px;
+}
+.nav ul li:last-child {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-image: url('img/download\ \(2\).jpg');
+    background-size: cover;
+    background-position: 4px 0;
+    z-index: 1;
+}
+.nav ul li:last-child::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, .15);
+    opacity: 0;
+    transition: .2s;
+    z-index: -1;
+}
+.nav ul li:last-child:hover::after{
+    opacity: 1;
+}
+
+/* search */
+.tatakan {
+    width: calc(100% - 700px);
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.tatakan h1 {
+    font-size: 5.5em;
+    color: #f3f3f3;
+    padding: 40px 0 10px;
+}
+.tatakan .lapisan {
+    position: relative;
+    width: calc(100% - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 17px;
+}
+.tatakan .lapisan input{
+    width: calc(100% - 50px);
+    height: 43px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 0 49px 0 45px;
+}
+.tatakan .lapisan img, i {
+    position: absolute;
+}
+.tatakan .lapisan i {
+    top: 13px;
+    left: 43px;
+    color: rgba(0, 0, 0, .5);
+}
+.tatakan .lapisan img {
+    width: 23px;
+    top: 11px;
+    right: 43px;
+    cursor: pointer;
+}
+
+/* shortcut */
+.shortcut {
+    width: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.shortcut .isi {
+    position: relative;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    transition: .2s;
+}
+.shortcut .isi:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+.shortcut .isi .logo {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50px;
+    margin: 18px 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.shortcut .isi .logo img {
+    width: 30px;
+}
+.shortcut .isi .logo .ui {
+    width: 23px;
+    height: 23px;
+    background: linear-gradient(to top right, rgb(68, 0, 255), rgb(233, 46, 46));
+    border-radius: 3px;
+}
+.shortcut .isi p {
+    color: #f3f3f3;
+    font-size: 15px;
+}
+.shortcut .isi .fa-ellipsis-v {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    color: #fff;
+    font-size: 15px;
+    right: 4px;
+    top: 4px;
+    cursor: pointer;
+    display: none;
+}
+.shortcut .isi:hover .fa-ellipsis-v {
+    display: grid;
+}
+.shortcut .isi .fa-ellipsis-v:hover {
+    background-color: rgba(255, 255, 255, .1);
+}
+.shortcut .isi:last-child .logo i{
+    font-size: 20px;
+}
